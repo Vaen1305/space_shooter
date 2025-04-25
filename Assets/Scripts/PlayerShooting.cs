@@ -6,6 +6,9 @@ public class PlayerShooting : MonoBehaviour
     public StatsPlayers stats;
     [SerializeField] private Transform firePoint;
 
+    [Header("Audio")]
+    [SerializeField] private AudioSource shootAudioSource;
+
     private BulletPool bulletPool;
     private float nextFireTime = 0f;
 
@@ -45,6 +48,11 @@ public class PlayerShooting : MonoBehaviour
         {
             Debug.LogWarning("Referencias faltantes en PlayerShooting");
             return;
+        }
+
+        if (shootAudioSource != null)
+        {
+            shootAudioSource.Play();
         }
 
         GameObject bullet = bulletPool.GetBullet(firePoint.position, firePoint.rotation);

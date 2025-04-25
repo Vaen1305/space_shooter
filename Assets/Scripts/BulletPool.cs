@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class BulletPool : MonoBehaviour
 {
-    [Header("Configuración")]
+    [Header("Configuracion")]
     public GameObject bulletPrefab;
     public int initialPoolSize = 20;
 
@@ -56,7 +56,7 @@ public class BulletPool : MonoBehaviour
     {
         if (bulletPool.Count == 0)
         {
-            Debug.Log("Creando bala adicional (pool dinámico)");
+            Debug.Log("Creando bala adicional (pool dinï¿½mico)");
             CreateNewBullet();
         }
 
